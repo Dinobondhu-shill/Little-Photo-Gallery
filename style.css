@@ -1,0 +1,352 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+#main{
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  
+}
+#main nav{
+  width: 100%;
+  height: 80px;
+  background: rgba(174, 157, 136, 0.496);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  
+}
+.nav_left{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav_left img{
+  width: 120px;
+}
+.nav_left h3{
+  font-size: 35px;
+  font-family:  sans-serif;
+  font-weight: 400;
+}
+.nav_left h3 span{
+  color: springgreen;
+  font-weight: 700;
+}
+
+.nav_right{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+  padding: 0 5px;
+}
+.nav_right a{
+  font-size: 19px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: rgb(28, 28, 26);
+  position: relative;
+  overflow: hidden;
+}
+.nav_right a::after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: rgb(17, 150, 221);
+  position: absolute;
+  bottom: -7%;
+  left: -100%;
+  transition: .4s ease;
+  transform-origin: left;
+}
+.nav_right a:hover:after{
+  left: 0;
+}
+.button{
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 8px 30px;
+  position: relative;
+  transition: .4s ease;
+}
+.button::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color:rgb(17, 150, 221);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform-origin: left;
+  transition: .4s ease;
+
+}
+.button:hover:before{
+  left: 0;
+}
+.button h4{
+  position: relative;
+  z-index: 99;
+  
+}
+.button:hover{
+  color: #fff;
+  border: none;
+}
+
+#banner{
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  
+}
+.overly{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: .2;
+  z-index: -1;
+
+}
+#banner h1{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  word-spacing: -5px;
+  line-height: 40px;
+  color: #170202;
+
+}
+#banner .input_search{
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7f7f7;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#banner .input_search button{
+  width: 18%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #DBDBDC;
+  border: 1px solid #9f9f9f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+#banner .input_search button i{
+  position: relative;
+}
+#banner .input_search button:hover .dropdown{
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown{
+  width: 122px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -112px;
+  left: -102px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown a{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdown a:hover{
+  background-color: #9f9f9f;
+}
+#banner .input_search input{
+  width: 70%;
+ 
+  outline: none;
+  border: none;
+  background-color: #f7f7f7;
+  font-size: 20px;
+}
+#banner .input_search #search{
+  width: 15%;
+  color: #9f9f9f;
+  text-align: right;
+  margin-right: 5px;
+}
+#banner .input_search #search:hover{
+  color: rgb(132, 132, 207);
+}
+
+.categories{
+  width: 100%;
+  background-color: #807673;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.categories .gall_text{
+  width: 70%;
+  padding: 10px 0;
+  margin-top: 50px;
+  font-size: 65px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #0d9583;
+  font-weight: 600;
+  border-bottom: 2px solid black;
+}
+.categories .gall_text span{
+  color: #170202;
+}
+.btn_cate{
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+.image_cat{
+  width: 100%;
+  padding: 20px;
+  color: #f7f7f7;
+  display: flex wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.image_cat img{
+  width: 314px;
+  height: 280px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-top: 20px;
+  transition: .3s ease-in-out;
+}
+.image_cat img:hover{
+  transform: scale(1.1);
+  border: 2px solid black;
+}
+.image_cat h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  color: springgreen;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px;
+}
+.btn_categ{
+  width: 110px;
+  height: 190px;
+  border-radius: 10px;
+  border: 2px solid hotpink;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .4s ease;
+}
+.btn_categ:hover{
+  transform: scale(1.2);
+}
+.btn_categ h2{
+  color: rgb(138, 134, 134);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+  position: relative;
+  z-index: 99;
+}
+.btn_categ:hover:after{
+  left: 0;
+}
+
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(./images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(./images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+@media (max-width:600px) {
+  .nav{
+    background-color: red;
+  }
+}

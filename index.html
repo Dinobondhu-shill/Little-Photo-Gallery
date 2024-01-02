@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="lightbox.css">
+  <link rel="stylesheet" href="./follower.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main">
+    <nav>
+      <div class="nav_left">
+        <img src="images/logo1.png" alt="logo"> <h3>Hey <span>Buddy</span>!</h3>
+      </div>
+      <div class="nav_right">
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">About Us</a>
+        <a href="#" class="button"><h4>Contact Us</h4></a>
+      </div>
+    </nav>
+    <div id="banner">
+      <div class="overly"></div>
+      <h1>The best free stock photos, royalty free images & videos shared by creators.</h1>
+      <div class="input_search">
+        <button><i class="fa-regular fa-image"></i>
+          <span class="btn">Photos</span>
+          <i class="fa-solid fa-caret-down">
+            <div class="dropdown">
+              <a href="#" class="photos">Photos</a><hr>
+              <a href="#" class="videos">Videos</a>
+            </div>
+          </i>
+        </button>
+        <input type="text" placeholder="Search for free Photos">
+        <a href="#"><i class="fa-solid fa-magnifying-glass" id="search"></i></a>
+      </div>
+    </div><hr>
+    <div class="categories">
+      <div class="gall_text">
+        <h2>let<span>'</span>s See our Gallery<span>!</span></h2>
+      </div>
+      <div class="btn_cate">
+        <button type="button" class="btn_categ" data-filter="all"><h2>All</h2></button>
+        <button type="button" class="btn_categ" data-filter=".baby"><img src="./images/bby/baby (1).jpg" alt="">
+          <h2>Baby</h2></button>
+        <button type="button" class="btn_categ" data-filter=".animals"><img src="./images/animals/animals (5).jpg" alt="">
+        <h2>Animals</h2></button>
+        <button type="button" class="btn_categ" data-filter=".flowers"><img src="./images/flower/flower (4).jpg" alt="">
+          <h2>Flowers</h2></button>
+        <button type="button" class="btn_categ" data-filter=".sport"><img src="./images/sport/sport (4).jpg" alt="">
+          <h2>Sports</h2></button>
+      </div>
+      <div class="image_cat">
+        <div class="mix baby" data-order="1">
+          <h2>Cute Babies </h2><hr>
+          <a href="images/bby/baby (1).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (1).jpg"></a>
+          <a href="images/bby/baby (2).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (2).jpg" alt=""></a>
+          <a href="images/bby/baby (3).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (3).jpg" alt=""></a>
+          <a href="images/bby/baby (4).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (4).jpg" alt=""></a>
+          <a href="images/bby/baby (5).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (5).jpg" alt=""></a>
+          <a href="images/bby/baby (6).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (6).jpg" alt=""></a>
+          <a href="images/bby/baby (7).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (7).jpg" alt=""></a>
+          <a href="images/bby/baby (8).jpg" data-lightbox="roadtrip"><img src="./images/bby/baby (8).jpg" alt=""></a>
+          <a href="images/bby/baby (9).jpg" data-lightbox="roadtrip"> <img src="./images/bby/baby (9).jpg" alt=""></a>
+        </div>
+        <div class="mix animals" data-order="2">
+          <h2>Animals</h2><hr>
+          <a href="./images/animals/animals (1).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (1).jpg"></a>
+          <a href="./images/animals/animals (2).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (2).jpg"></a>
+          <a href="./images/animals/animals (3).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (3).jpg"></a>
+          <a href="./images/animals/animals (4).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (4).jpg"></a>
+          <a href="./images/animals/animals (5).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (5).jpg"></a>
+          <a href="./images/animals/animals (6).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (6).jpg"></a>
+          <a href="./images/animals/animals (7).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (7).jpg"></a>
+          <a href="./images/animals/animals (8).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (8).jpg"></a>
+          <a href="./images/animals/animals (9).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (9).jpg" alt=""></a>
+          <a href="./images/animals/animals (10).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (10).jpg"></a>
+          <a href="./images/animals/animals (11).jpg" data-lightbox="roadtrip"><img src="./images/animals/animals (11).jpg"></a>
+        </div>
+        <div class="mix flowers" data-order="3">
+          <h2>Flowers,That's means it's You</h2><hr>
+          <a href="images/flower/flower (1).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (1).jpg" alt=""></a>
+          <a href="images/flower/flower (2).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (2).jpg" alt=""></a>
+          <a href="images/flower/flower (3).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (3).jpg" alt=""></a>
+          <a href="images/flower/flower (4).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (4).jpg" alt=""></a>
+          <a href="images/flower/flower (5).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (5).jpg" alt=""></a>
+          <a href="images/flower/flower (6).jpg" data-lightbox="roadtrip"><img src="./images/flower/flower (6).jpg" alt=""></a>
+        </div>
+        <div class="mix sport" data-order="4">
+          <h2>Sports</h2><hr>
+          <a href="images/sport/sport (1).jpg" data-lightbox="roadtrip"><img src="./images/sport/sport (1).jpg"></a>
+          <a href="images/sport/sport (2).jpg" data-lightbox="roadtrip"><img src="./images/sport/sport (2).jpg"></a>
+          <a href="images/sport/sport (3).jpg" data-lightbox="roadtrip"><img src="./images/sport/sport (3).jpg"></a>
+          <a href="images/sport/sport (4).jpg" data-lightbox="roadtrip"><img src="./images/sport/sport (4).jpg"></a>
+          <a href="images/sport/sport (5).jpg" data-lightbox="roadtrip"><img src="./images/sport/sport (5).jpg"></a>
+        </div>
+    </div>
+  </div>
+  </div>
+ 
+  <script src="./js/code.jquery.com_jquery-1.12.4.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/mouse-follower.min.js"></script>
+  <script src="./js/mixitup.min.js"></script>
+  <script src="./js/lightbox.js"></script>
+  <script src="./js/assets.codepen.io_16327_gsap-latest-beta.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
